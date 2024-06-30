@@ -103,6 +103,10 @@ table.report_chart tbody tr td {border:none!important;}
 	box-sizing: border-box;	
 }
 
+#contentcontainter * {
+    box-sizing: border-box;
+}
+
 /* The actual Giving Form for the giving day portal - embedded form */
 /* the main floating container ... */
 .part.give-now-form {
