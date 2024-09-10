@@ -278,6 +278,13 @@ div#wrapper>div#aside {
     background-color: var(--primary-lc-gray) !important;
 }
 
+.button.button-small {
+    font-size: .8em;
+    padding: 2px;
+    margin: 2px;
+    font-weight: lighter;
+}
+
 .fb_iframe_widget {
     display: block;
 }
