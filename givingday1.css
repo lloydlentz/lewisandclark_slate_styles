@@ -318,6 +318,11 @@ div.individual-goal {
     box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15);
 }
 
+.individual-goal-nofloat:hover {
+    margin-top: 10px !important;
+    box-shadow: 0 20px 30px 0 rgba(53, 61, 72, 0.15);
+}
+
 /* buttons on the goal Goals tab */
 .give-goal-button {
     width: 100%;
