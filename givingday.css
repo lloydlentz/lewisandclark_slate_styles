@@ -18,9 +18,12 @@
 /* the main headline styles */
 #contentcontainter .headline h1 {
     font-size: 30px;
-    text-align: center;
+    text-align: center !important;
     padding-bottom: 15px;
-    color: #555;
+    color: var(--primary-lc-orange) !important;
+    font-family: acumin-pro, sans-serif;
+    font-weight: lighter;
+    display: block;
 }
 
 #contentcontainter .overview h2 {
@@ -45,6 +48,19 @@
     font-size: 1.6em;
     color: #555;
     white-space: nowrap;
+}
+
+
+html h1, html h2 {
+    margin-top: 25px;
+    margin-bottom: 4px;
+    color: var(--primary-lc-orange) !important;
+    font-family: acumin-pro, sans-serif;
+    font-size: 3rem;
+    line-height: 1.25;
+    font-weight: lighter;
+    text-align: center !important;
+    display: block;
 }
 /* #page * {box-sizing: border-box;} */
 
@@ -283,25 +299,6 @@ div#wrapper>div#aside {
     padding: 2px;
     margin: 2px;
     font-weight: lighter;
-}
-
-.fb_iframe_widget {
-    display: block;
-}
-
-/* The tabs area ... */
-div.part.giving-tabs {
-    padding: 10px 0px;
-    margin-bottom: 0px;
-}
-
-/* the content of the various tabs */
-/* About and Updates */
-div.part.about-tab,
-div.part.updates-tab {
-    background-color: #fff;
-    padding: 30px;
-    font-size: 14px;
 }
 
 /* goal Goals */
@@ -670,4 +667,247 @@ a:hover.replicate_delete {
 @keyframes slideIn {from {bottom: -300px; opacity: 0} to {bottom: 0; opacity: 1} }
 @-webkit-keyframes fadeIn {from { opacity: 0    }to {opacity: 1}}
 @keyframes fadeIn {from { opacity: 0} to {opacity: 1}
+}
+
+
+
+
+
+div#announce-container {
+    padding: 10px;
+    border: solid 2px grey;
+    border-radius: 4px;
+}
+
+div.announce_section {
+    padding: 10px 0px;
+    border-top: solid;
+}
+.announce_section_time {
+    padding: 5px;
+    background-color: slategray;
+    color: white;
+}
+
+
+
+
+
+
+/*   MOVE Main Content to here */
+.wrap_content {
+    width: 100%;
+    max-width: 1325px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main_hero {
+    /* display: flex; */
+    align-items: center;
+    flex-direction: row; /* Default: elements sit next to each other */
+}
+
+@media (max-width: 768px) { /* Apply stacking for smaller screens, adjust as necessary */
+    .main_hero {
+    flex-direction: column; /* Stack elements on top of each other */
+    align-items: center; /* Center align for better aesthetics */
+    }
+
+    .main_goal {
+    width: 100%; /* Ensure the goal section takes full width on mobile */
+    padding-left: 0; /* Remove left padding on mobile for better fit */
+    text-align: center; /* Center align content for better mobile presentation */
+    }
+
+    .main_banner {
+    width: 100%; /* Ensure the banner takes full width on mobile */
+    margin-bottom: 20px; /* Add spacing between banner and goal section */
+    }
+}
+
+.main_banner{
+    flex-grow: 1;
+    border-radius: 5px;
+}
+.main_goal{
+    font-size: 1.2rem;
+    color: var(--secondary-lc-dark-blue);
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) { /* Apply stacking for smaller screens, adjust as necessary */
+    .main_goal{
+        /* width: 360px;
+        padding-left: 35px; */
+    }
+
+}
+@media (max-width: 768px) { /* Apply stacking for smaller screens, adjust as necessary */
+    .main_goal{
+        padding-left: reset;
+    }
+}
+
+.goal_stat{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.goal_stat_label {
+    width: 100%;
+}
+
+.goal_stat#donor_count {
+    order: 1;
+    flex-basis: 40%;
+}
+.goal_stat#donor_count_number, 
+.goal_stat#dollar_count_number {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: var(--primary-lc-orange)
+}
+.goal_stat#donor_count_label, 
+.goal_stat#dollar_count_label {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    /* color: var(--primary-lc-gray); */
+    margin-bottom: unset;
+
+}
+
+.goal_stat#donor_count_progress_stat {
+    order: 2;
+    flex-basis: 60%;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.goal_stat#donor_count_progress_bar  {
+    order: 3;
+    flex-basis: 100%;
+    height: 20px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+.goal_stat#donor_count_progress_bar_progress, 
+.goal_stat#dollar_count_progress_bar_progress{
+    min-width: 5%; 
+    background: var(--primary-lc-orange);
+    /* margin-bottom: unset; */
+    padding: 3px
+}
+.goal_stat#dollar_count_progress_stat {
+    order: 4;
+    flex-basis: 60%;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.goal_stat#dollar_count_progress_bar  {
+    order: 5;
+    flex-basis: 100%;
+    height: 20px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.goal_stat_progress_label{
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+    font-weight: bold;
+    color: var(--primary-lc-white);
+}
+
+.goal_stat#dollar_count {
+    order: 6;
+    flex-basis: 40%;
+}
+
+
+#main_give {
+    order: 8;
+    flex-basis: 100%;
+}
+
+
+.css_define_section{
+    display: none;
+}
+
+
+.tiertwo_title {
+    font-size: 1.4em;
+    text-align: center;
+    padding: 3px;
+}
+
+.tiertwo_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the gap between items as needed */
+    justify-content: space-around;
+}
+
+.tiertwo_item {
+    flex: 1 1 calc(25% - 16px); /* 25% width minus the gap */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    max-width: calc(25% - 16px); /* Ensures no item exceeds 25% width */
+    min-width: 250px; /* Optional: set a minimum width for items */
+}
+
+@media (max-width: 1000px) {
+    .tiertwo_item {
+        flex: 1 1 calc(50% - 16px); /* 2 items per row on smaller screens */
+        max-width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 600px) {
+    .tiertwo_item {
+        flex: 1 1 calc(100% - 16px); /* 1 item per row on narrow screens */
+        max-width: calc(100% - 16px);
+    }
+}
+
+
+
+
+            .tiertwo_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the gap between items as needed */
+}
+
+.tiertwo_item {
+    flex: 1 1 calc(25% - 16px); /* 25% width minus the gap */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    max-width: calc(25% - 16px); /* Ensures no item exceeds 25% width */
+    min-width: 250px; /* Optional: set a minimum width for items */
+}
+
+@media (max-width: 1000px) {
+    .tiertwo_item {
+        flex: 1 1 calc(50% - 16px); /* 2 items per row on smaller screens */
+        max-width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 600px) {
+    .tiertwo_item {
+        flex: 1 1 calc(100% - 16px); /* 1 item per row on narrow screens */
+        max-width: calc(100% - 16px);
+    }
 }
