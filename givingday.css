@@ -188,7 +188,7 @@ div#wrapper>div.fullWidth {
     flex-basis: 100%;
 }
 
-div#wrapper>div.centered {
+div.centered {
     text-align: center;
 }
 
@@ -910,4 +910,22 @@ div.announce_section {
         flex: 1 1 calc(100% - 16px); /* 1 item per row on narrow screens */
         max-width: calc(100% - 16px);
     }
+}
+
+
+
+
+.challenge_complete {
+    /* background-color: yellow; */
+    padding: 25px;
+    border-radius: 5px;
+    margin: -10px;
+    font-size: 2em;
+    font-weight: bold;
+    background-image: url('https://engage.lclark.edu/www/images/portal_elements/greencheck.png');
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-size: contain;
+    text-align: right;
+    text-shadow: 1px 2px 5px white;
 }
