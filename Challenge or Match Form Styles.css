@@ -1,132 +1,144 @@
-input#form_40d358a2-8a43-46a8-b747-b65c6da1371b, 
+input#form_40d358a2-8a43-46a8-b747-b65c6da1371b,
 input#form_ddc2d515-1706-4f84-ba03-c27e7a24b495 {
-  font-size: 2em;
+    font-size: 2em;
 }
 
-footer{
-  margin-top: 75px;
+footer {
+    margin-top: 75px;
 }
 
 /* increase h1 header font size to 1.2em */
 .form_h1[data-type=h1] .form_label {
-  font-size: 1.5em; !important
+    font-size: 1.5em;
+    !important
 }
 
 /* increase label font size to 1.2em */
-.form_label { 
-  font-size: 1.2em;  
+.form_label {
+    font-size: 1.2em;
 }
+
 /* increase response font size to 1.2em */
-.form_response { 
-  font-size: 1.2em; 
+.form_response {
+    font-size: 1.2em;
 }
 
 /* extra padding */
-select { 
-  padding: 5px;    
-  border-radius: 5px;
-  width: 100% !important
+select {
+    padding: 5px;
+    border-radius: 5px;
+    width: 100% !important
 }
 
 /* radio and check. boxes orange */
-input[type=radio], 
-input[type=checkbox] { accent-color: DarkOrange; }
+input[type=radio],
+input[type=checkbox] {
+    accent-color: DarkOrange;
+}
 
 /* submit button bigger */
-.form_button_submit {   
-  width: 100%; 
-  padding: 15px;    
-  border-radius: 5px;    
-  background-color: lightgray;
-  color: #555;
-  font-size: 20px;
+.form_button_submit {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: lightgray;
+    color: #555;
+    font-size: 20px;
 }
+
 /* hover submit button */
 .form_button_submit label:hover {
-  background-color: darkorange; 
-  color: white;
+    background-color: darkorange;
+    color: white;
 }
 
 /* text boxes and email wider */
-input[type=text], 
-input[type=email] { 
-  padding: 10px;    
-  border-radius: 5px;
-  width: 100% !important
+input[type=text],
+input[type=email] {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100% !important
 }
 
-input:not([type="checkbox"]):not([type="radio"]), 
-.form_container select, 
+input:not([type="checkbox"]):not([type="radio"]),
+.form_container select,
 .form_container textarea {
-	font-size: 14px;
-	padding: 7px;
-	margin: 3px 0 4px;
-	border: 1px solid #ccc;
-	color: #000;
-	font-family: sans-serif;
-	line-height: normal;
-	box-sizing: border-box;
-	border-radius: 3px;
+    font-size: 14px;
+    padding: 7px;
+    margin: 3px 0 4px;
+    border: 1px solid #ccc;
+    color: #000;
+    font-family: sans-serif;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 3px;
 }
 
 .form_responses {
-  width: 100%; 
+    width: 100%;
 }
 
 /* turning the radio/option buttons into tiles */
-.form_question.form_checkbox div.form_responses, 
+.form_question.form_checkbox div.form_responses,
 .form_question.form_radio div.form_responses {
-  display: flex !important;
-  flex-wrap: wrap;
-  justify-content: stretch;
-  align-content: space-around;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-content: space-around;
 }
-.form_question.form_checkbox div.form_response, 
+
+.form_question.form_checkbox div.form_response,
 .form_question.form_radio div.form_response {
-		flex: 1 1 auto;    
-    background-color: transparent;    
-    border-radius: 8px;  	
+    flex: 1 1 auto;
+    background-color: transparent;
+    border-radius: 8px;
     text-align: center;
     box-sizing: border-box;
 }
+
 /* hiding the actual input control ... */
-.form_question.form_radio input[type=radio], 
+.form_question.form_radio input[type=radio],
 .form_question.form_checkbox input[type=checkbox] {
-  opacity: 0; 
-  width: 1px; 
-  height: 1px;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
 }
+
 /* styling the label instead */
-.form_question.form_radio input[type=radio]+label, 
+.form_question.form_radio input[type=radio]+label,
 .form_question.form_checkbox input[type=checkbox]+label {
-	display:flex;
-  flex-direction: column;
-  height:60px;
-	padding: 10px;
-  margin: 2px;
-  color: #555;
-	background-color: lightgray;	
-  border-radius: 7px;
-	width: 95%;
-	font-size: 1.2em;
-  font-weight: bold;
-	box-shadow: 0 0 2px rgba(53,61,72,0.25);
-  box-sizing: border-box;	
-  align-items: center;
-  justify-content: center;  
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    padding: 10px;
+    margin: 2px;
+    color: #555;
+    background-color: lightgray;
+    border-radius: 7px;
+    width: 95%;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 0 2px rgba(53, 61, 72, 0.25);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
 }
 
 /* hover styles */
-.form_question.form_checkbox div.form_response label:hover, 
+.form_question.form_checkbox div.form_response label:hover,
 .form_question.form_radio div.form_response label:hover {
-  background-color: orange; color: white;
-}
-/* selected option */
-.form_question.form_checkbox div.form_response input[type=checkbox]:checked+label, 
-.form_question.form_radio div.form_response input[type=radio]:checked+label {
-  background-color: darkorange; color: white;
-}
-.form_question.form_radio div.form_response input[type=radio]:focus+label {
-  background-color: darkorange; color: white;
+    background-color: orange;
+    color: white;
 }
 
+/* selected option */
+.form_question.form_checkbox div.form_response input[type=checkbox]:checked+label,
+.form_question.form_radio div.form_response input[type=radio]:checked+label {
+    background-color: darkorange;
+    color: white;
+}
+
+.form_question.form_radio div.form_response input[type=radio]:focus+label {
+    background-color: darkorange;
+    color: white;
+}
