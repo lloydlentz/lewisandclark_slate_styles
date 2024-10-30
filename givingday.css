@@ -709,6 +709,11 @@ div.announce_section {
     flex-direction: row; /* Default: elements sit next to each other */
 }
 
+.tier2_goal {
+    width: 80%;
+    margin: auto;
+}
+
 @media (max-width: 768px) { /* Apply stacking for smaller screens, adjust as necessary */
     .main_hero {
     flex-direction: column; /* Stack elements on top of each other */
@@ -764,7 +769,7 @@ div.announce_section {
 
 .goal_stat_label {
     width: 100%;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .goal_stat_label_tile {
     width: 100%;
@@ -798,24 +803,28 @@ div.announce_section {
     align-self: flex-end;
 }
 
-.goal_stat#donor_count_progress_bar  {
-    order: 3;
+.goal_stat#donor_count_progress_bar,
+.goal_stat#dollar_count_progress_bar   {
     flex-basis: 100%;
-    height: 20px;
+    height: 35px;
     border-radius: 3px;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     margin: 15px 0px;
 }
+
+.goal_stat#donor_count_progress_bar  {
+    order: 3;
+}
 .goal_stat#donor_count_progress_bar_progress, 
 .goal_stat#dollar_count_progress_bar_progress{
-    min-width: 5%; 
+    min-width: 50px; 
     background: var(--primary-lc-orange);
     /* margin-bottom: unset; */
     padding: 3px
 }
 .goal_stat#dollar_count_progress_stat {
-    order: 4;
+    order: 7;
     flex-basis: 60%;
     text-align: right;
     align-self: flex-end;
@@ -823,17 +832,13 @@ div.announce_section {
 
 .goal_stat#dollar_count_progress_bar  {
     order: 5;
-    flex-basis: 100%;
-    height: 20px;
-    border-radius: 3px;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
-    overflow: hidden;
 }
 
 .goal_stat_progress_label{
-    margin: 0 auto;
+    margin: 4px 0px auto;
     width: 90%;
     text-align: center;
+    font-size: 1.6em;
     font-weight: bold;
     font-weight: bold;
     color: var(--primary-lc-white);
@@ -842,6 +847,29 @@ div.announce_section {
 .goal_stat#dollar_count {
     order: 6;
     flex-basis: 40%;
+}
+
+
+.tile_hero .goal_stat#donor_count_progress_bar,
+.tile_hero .goal_stat#dollar_count_progress_bar {
+    height: 24px;
+}
+
+.tile_hero .goal_stat_progress_label {
+    font-size: 1em;
+    margin: 0px auto;
+}
+
+
+/* Parent Goals */
+
+.parent_goal .goal_stat#donor_count_label, 
+.parent_goal .goal_stat#dollar_count_label, 
+.parent_goal .goal_stat#dollar_count_number, 
+.parent_goal .goal_stat#donor_count_number,
+.parent_goal .goal_stat_label
+{
+    font-size: 1.6em;
 }
 
 
@@ -922,6 +950,32 @@ div.announce_section {
 
 
 
+
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tile {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.tile:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.complete {
+    background-color: #c8e6c9;
+}
 
 .challenge_complete {
     /* background-color: yellow; */
