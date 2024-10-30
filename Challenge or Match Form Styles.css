@@ -1,16 +1,6 @@
-input#form_40d358a2-8a43-46a8-b747-b65c6da1371b,
-input#form_ddc2d515-1706-4f84-ba03-c27e7a24b495 {
-    font-size: 2em;
-}
-
-footer {
-    margin-top: 75px;
-}
-
 /* increase h1 header font size to 1.2em */
 .form_h1[data-type=h1] .form_label {
-    font-size: 1.5em;
-    !important
+    font-size: 1.5em !important;
 }
 
 /* increase label font size to 1.2em */
@@ -27,14 +17,14 @@ footer {
 select {
     padding: 5px;
     border-radius: 5px;
-    width: 100% !important
+    /* width: 100% !important; */
 }
 
-/* radio and check. boxes orange */
-input[type=radio],
+/* radio and checkboxes orange */
+/* input[type=radio],
 input[type=checkbox] {
     accent-color: DarkOrange;
-}
+} */
 
 /* submit button bigger */
 .form_button_submit {
@@ -57,12 +47,13 @@ input[type=text],
 input[type=email] {
     padding: 10px;
     border-radius: 5px;
-    width: 100% !important
+    /* width: 100% !important; */
 }
 
 input:not([type="checkbox"]):not([type="radio"]),
 .form_container select,
-.form_container textarea {
+.form_container textarea
+ {
     font-size: 14px;
     padding: 7px;
     margin: 3px 0 4px;
@@ -72,23 +63,70 @@ input:not([type="checkbox"]):not([type="radio"]),
     line-height: normal;
     box-sizing: border-box;
     border-radius: 3px;
+    width: unset;
+}
+.form_label
+ {
+    font-size: 14px;
+    padding: 7px;
+    margin: 3px 0 4px;
+    font-family: sans-serif;
+    line-height: normal;
+    box-sizing: border-box;
+    width: unset;
 }
 
 .form_responses {
     width: 100%;
 }
 
-/* turning the radio/option buttons into tiles */
-.form_question.form_checkbox div.form_responses,
-.form_question.form_radio div.form_responses {
+.form_question_445a17f8-9dd2-487f-867a-4c75aa78238b label.form_label {
+    min-width: 150px;
+}
+
+.form_container input:not([type="checkbox"]):not([type="radio"]), .form_container textarea {
+    width: unset !important;
+}
+
+/* Styling checkboxes as a regular list */
+.form_question.form_checkbox div.form_responses {
+    display: block !important;
+}
+
+.form_question.form_checkbox div.form_response {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Default checkbox styling */
+.form_question.form_checkbox input[type=checkbox] {
+    opacity: 1;
+    width: auto;
+    height: auto;
+}
+
+/* Removing tile styling from checkboxes' labels */
+.form_question.form_checkbox input[type=checkbox]+label {
+    display: inline-block;
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    width: auto;
+    font-size: 1.2em;
+    font-weight: normal;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Keeping radio buttons styled as tiles */
+.form_question.form_radio.form_question_8e26d710-c77f-4ab2-a745-3dbbe5a449fa div.form_responses {
     display: flex !important;
     flex-wrap: wrap;
     justify-content: stretch;
     align-content: space-around;
 }
 
-.form_question.form_checkbox div.form_response,
-.form_question.form_radio div.form_response {
+.form_question.form_radio.form_question_8e26d710-c77f-4ab2-a745-3dbbe5a449fa div.form_response {
     flex: 1 1 auto;
     background-color: transparent;
     border-radius: 8px;
@@ -96,17 +134,15 @@ input:not([type="checkbox"]):not([type="radio"]),
     box-sizing: border-box;
 }
 
-/* hiding the actual input control ... */
-.form_question.form_radio input[type=radio],
-.form_question.form_checkbox input[type=checkbox] {
+/* Radio button styles */
+.form_question.form_radio.form_question_8e26d710-c77f-4ab2-a745-3dbbe5a449fa input[type=radio] {
     opacity: 0;
     width: 1px;
     height: 1px;
 }
 
-/* styling the label instead */
-.form_question.form_radio input[type=radio]+label,
-.form_question.form_checkbox input[type=checkbox]+label {
+/* Styling the radio button labels */
+.form_question.form_radio.form_question_8e26d710-c77f-4ab2-a745-3dbbe5a449fa input[type=radio]+label {
     display: flex;
     flex-direction: column;
     height: 60px;
@@ -124,21 +160,32 @@ input:not([type="checkbox"]):not([type="radio"]),
     justify-content: center;
 }
 
-/* hover styles */
-.form_question.form_checkbox div.form_response label:hover,
-.form_question.form_radio div.form_response label:hover {
+/* Hover and selected styles for radio buttons */
+.form_question.form_radio.form_question_8e26d710-c77f-4ab2-a745-3dbbe5a449fa div.form_response label:hover {
     background-color: orange;
     color: white;
 }
 
-/* selected option */
-.form_question.form_checkbox div.form_response input[type=checkbox]:checked+label,
-.form_question.form_radio div.form_response input[type=radio]:checked+label {
+.form_question.form_radio.form_question_8e26d710-c77f-4ab2-a745-3dbbe5a449fa input[type=radio]:checked+label {
     background-color: darkorange;
     color: white;
 }
 
-.form_question.form_radio div.form_response input[type=radio]:focus+label {
+.form_question.form_radio.form_question_8e26d710-c77f-4ab2-a745-3dbbe5a449fa input[type=radio]:focus+label {
     background-color: darkorange;
     color: white;
+}
+
+
+
+/* Make the other Radio Buttons look like a row */
+
+.xform_question.form_radio div.form_responses {
+    display: flex !important;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: flex-start;
+}
+.xform_question.form_radio div.form_response {
+    margin: 5px 20px 0px;
 }
