@@ -22,6 +22,37 @@ function updateCountdown() {
     document.getElementById('countdown_seconds').textContent = String(seconds).padStart(2, '0');
 }
 
+function countdownTimer(targetDate) {
+    const target = new Date(targetDate).getTime();
+
+    const updateTimer = () => {
+        const now = new Date().getTime();
+        const distance = target - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('countdown_days').innerText = days;
+        document.getElementById('countdown_hours').innerText = hours;
+        document.getElementById('countdown_minutes').innerText = minutes;
+        document.getElementById('countdown_seconds').innerText = seconds;
+
+        if (distance < 0) {
+            clearInterval(interval);
+            document.getElementById('countdown_days').innerText = '0';
+            document.getElementById('countdown_hours').innerText = '0';
+            document.getElementById('countdown_minutes').innerText = '0';
+            document.getElementById('countdown_seconds').innerText = '0';
+        }
+    };
+
+    const interval = setInterval(updateTimer, 1000);
+}
+
+
+
 
 $(document).ready(function() {
     // Iterate over each div with class "super-lazy-load"
