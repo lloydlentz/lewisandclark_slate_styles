@@ -1,3 +1,28 @@
+
+function updateCountdown() {
+    let now = new Date().getTime();
+    let timeLeft = countdownLaunchDate - now;
+
+    if (timeLeft < 0) {
+        document.getElementById('countdown_days').textContent = "00";
+        document.getElementById('countdown_hours').textContent = "00";
+        document.getElementById('countdown_minutes').textContent = "00";
+        document.getElementById('countdown_seconds').textContent = "00";
+        return;
+    }
+
+    let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById('countdown_days').textContent = String(days).padStart(2, '0');
+    document.getElementById('countdown_hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('countdown_minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('countdown_seconds').textContent = String(seconds).padStart(2, '0');
+}
+
+
 $(document).ready(function() {
     // Iterate over each div with class "super-lazy-load"
     $('.super-lazy-load').each(function() {
