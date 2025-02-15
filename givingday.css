@@ -889,6 +889,10 @@ div.announce_section {
     font-weight: bold;
     text-align: center;
     padding: 5px;
+    min-height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Ensure images are centered and consistent */
