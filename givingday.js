@@ -48,6 +48,8 @@ function countdownTimer(targetDate) {
         }
     };
 
+    // Call updateTimer immediately to avoid delay
+    updateTimer();
     const interval = setInterval(updateTimer, 1000);
 }
 
