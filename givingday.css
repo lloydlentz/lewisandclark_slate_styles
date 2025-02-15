@@ -885,10 +885,26 @@ div.announce_section {
 
 
 .tiertwo_title {
-    font-size: 1.4em;
+    font-size: 1.5em;
+    font-weight: bold;
     text-align: center;
-    padding: 3px;
+    padding: 5px;
 }
+
+/* Ensure images are centered and consistent */
+.tile_hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.tile_banner img {
+    max-width: 100%;
+    max-height: 200px; /* Adjust to fit inside tiles */
+    object-fit: contain; /* Ensure images scale properly */
+}
+
 
 .tiertwo_wrapper {
     display: flex;
@@ -902,6 +918,10 @@ div.announce_section {
     box-sizing: border-box; /* Ensures padding and border are included in the width */
     max-width: calc(25% - 16px); /* Ensures no item exceeds 25% width */
     min-width: 250px; /* Optional: set a minimum width for items */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 320px; /* Set a fixed height */
 }
 
 @media (max-width: 1000px) {
@@ -918,10 +938,7 @@ div.announce_section {
     }
 }
 
-
-
-
-            .tiertwo_wrapper {
+.tiertwo_wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 16px; /* Adjust the gap between items as needed */
