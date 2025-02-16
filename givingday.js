@@ -70,8 +70,12 @@ $(document).ready(function() {
             url: endpoint,
             type: 'GET',
             success: function(response) {
-                // Assuming the response contains the HTML content
-                $div.html(response);
+                if (!response.trim()) { // Check if response is empty
+                    console.warn("No data found for record: " + record);
+                    $div.html(`<div id="main_banner_placeholder" style="min-height: 200px; display: flex; align-items: center; justify-content: center;">no content...</div>`);
+                } else {
+                    $div.html(response);
+                }
             },
             error: function(xhr, status, error) {
                 console.error("Error fetching data for record: " + record, error);
