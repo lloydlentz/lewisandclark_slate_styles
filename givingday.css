@@ -926,7 +926,7 @@ div.announce_section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 320px; /* Set a fixed height */
+    min-height: 320px; /* Set a fixed height */
 }
 
 @media (max-width: 1000px) {
