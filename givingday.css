@@ -1013,3 +1013,11 @@ div.announce_section {
     text-align: right;
     text-shadow: 1px 2px 5px white;
 }
+
+.challenge_progress_bar {
+    height: 20px !important;
+}
+.challenge_goal_stat_progress_label {
+    margin: 1px 0px auto;
+    font-size: 0.8em;
+}
