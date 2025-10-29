@@ -1015,9 +1015,9 @@ div.announce_section {
 }
 
 .challenge_progress_bar {
-    height: 20px !important;
+    height: 24px !important;
 }
 .challenge_goal_stat_progress_label {
     margin: 1px 0px auto;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
